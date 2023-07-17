@@ -87,3 +87,17 @@ def test_check_password():
     second_part_of_conditions = [condition5, condition6, condition7, condition8]
     list_of_conditions = all([first_part_of_conditions, second_part_of_conditions])
     assert list_of_conditions
+
+
+# Homework part 2
+
+
+def test_random_number():
+    condition1 = lib.create_random_number(0, 1)
+    condition2 = lib.create_random_number(2, 3)
+    final_condition_part1 = condition1 == 0 or condition1 == 1
+    final_condition_part2 = condition2 == 2 or condition2 == 3
+    list_of_conditions = [final_condition_part1, final_condition_part2]
+    assert all(list_of_conditions)
+
+        
