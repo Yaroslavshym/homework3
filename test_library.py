@@ -66,7 +66,6 @@ def test_check_if_lat_char():
 
 
 def test_check_password():
-    list_of_conditions = []
     user_password_v1 = 'Password'
     user_password_v2 = 'Password'
     user_password_v3 = 'password'

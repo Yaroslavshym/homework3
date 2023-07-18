@@ -7,9 +7,7 @@ def check_number(user_password: str) -> bool:
     numbers = '1234567890'
     for char in user_password:
         if char in numbers:
-            number_of_numbers += 1
-    if number_of_numbers > 0:
-        return True
+            return True
     else:
         return False
 
@@ -70,7 +68,6 @@ def check_if_lat_char(user_password: str) -> bool:
 
 
 def check_password(user_password: str) -> bool:
-    list_of_conditions = []
     condition1 = check_length(user_password)
     condition2 = check_upper_char(user_password)
     condition3 = check_lower_char(user_password)
@@ -78,13 +75,12 @@ def check_password(user_password: str) -> bool:
     condition5 = check_if_space_char(user_password)
     condition6 = check_if_lat_char(user_password)
     condition7 = check_number(user_password)
-    first_part_of_conditions = condition1 and condition2 and condition3
-    second_part_of_conditions = condition4 and condition5 and condition6 and condition7
-    list_of_conditions = all([first_part_of_conditions, second_part_of_conditions])
+    first_list_of_conditions = [condition1, condition2, condition3, condition4]
+    second_list_of_conditions = [condition5, condition6, condition7]
+    list_of_conditions = all([first_list_of_conditions, second_list_of_conditions])
     if list_of_conditions:
         return True
-    else:
-        return False
+    return False
 
 
 # Homework part 2
