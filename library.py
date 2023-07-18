@@ -3,68 +3,51 @@ import random
 
 # Homework part 1
 def check_number(user_password: str) -> bool:
-    number_of_numbers = 0
     numbers = '1234567890'
     for char in user_password:
         if char in numbers:
             return True
-    else:
-        return False
+    return False
 
 
 def check_length(user_password: str) -> bool:
     if len(user_password) >= 8:
         return True
-    else:
-        return False
+    return False
 
 
 def check_upper_char(user_password: str) -> bool:
-    number_of_upper_char = 0
     for char in user_password:
         if char.isupper():
-            number_of_upper_char += 1
-    if number_of_upper_char > 0:
-        return True
-    else:
-        return False
+            return True
+    return False
 
 
 def check_lower_char(user_password: str) -> bool:
-    number_of_lower_char = 0
     for char in user_password:
         if char.islower():
-            number_of_lower_char += 1
-    if number_of_lower_char > 0:
-        return True
-    else:
-        return False
+            return True
+    return False
 
 
 def check_special_char(user_password: str) -> bool:
-    number_of_special_char = 0
     special_char = '+-/*!"№;%:?*()='
     for char in user_password:
         if char in special_char:
-            number_of_special_char += 1
-    if number_of_special_char > 0:
-        return True
-    else:
-        return False
+            return True
+    return False
 
 
 def check_if_space_char(user_password: str) -> bool:
     if user_password.find(' '):
         return False
-    else:
-        return True
+    return True
 
 
 def check_if_lat_char(user_password: str) -> bool:
     if user_password.isascii():
         return True
-    else:
-        return False
+    return False
 
 
 def check_password(user_password: str) -> bool:
