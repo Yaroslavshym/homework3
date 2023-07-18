@@ -66,7 +66,6 @@ def test_check_if_lat_char():
 
 
 def test_check_password():
-    list_of_conditions = []
     user_password_v1 = 'Password'
     user_password_v2 = 'Password'
     user_password_v3 = 'password'
@@ -99,5 +98,3 @@ def test_random_number():
     final_condition_part2 = condition2 == 2 or condition2 == 3
     list_of_conditions = [final_condition_part1, final_condition_part2]
     assert all(list_of_conditions)
-
-        
